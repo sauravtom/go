@@ -59,12 +59,12 @@ func (c *Client) GetStellarTomlByAddress(addy string) (*Response, error) {
 // file
 func (c *Client) url(domain string) string {
 	var scheme string
-
-	if c.UseHTTP {
-		scheme = "http"
-	} else {
-		scheme = "https"
-	}
+	scheme = "http"
+	//if c.UseHTTP {
+	//	scheme = "http"
+	//} else {
+	//	scheme = "https"
+	//}
 
 	return fmt.Sprintf("%s://%s%s", scheme, domain, WellKnownPath)
 }
